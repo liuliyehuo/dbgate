@@ -1,7 +1,8 @@
 FROM node:22-slim
 
 LABEL org.opencontainers.image.source="https://github.com/dbgate/dbgate"
-
+ENV http_proxy=http://172.18.8.60:7890
+ENV https_proxy=http://172.18.8.60:7890
 RUN apt-get update && apt-get install -y \
     ca-certificates \
     iputils-ping \
